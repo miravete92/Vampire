@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<form>
+		<div class="rating">
+		<span>◎</span><span>◎</span><span>◎</span><span>◎</span><span>◎</span>
+		</div>
+		<script type="text/javascript">
+			$('.rating > span').click(function(e){
+				if($(this).hasClass("marked")){
+					$(this).removeClass("marked");
+				}
+				else{
+					$(this).parent().find('span').removeClass("marked");
+					$(this).addClass("marked");
+				}
+				
+			});
+		</script>
+	</form> 
+</body>
+</html>

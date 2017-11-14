@@ -1,0 +1,17 @@
+.rating > span:hover {
+   cursor: pointer;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span.marked:before,
+.rating > span.marked ~ span:before{
+	content: "\25C9";
+	position: absolute;
+}
